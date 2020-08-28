@@ -5,7 +5,7 @@ package de.saring.leafletmap
  *
  * @author Stefan Saring
  */
-enum class ColorMarker(val iconName: String) {
+enum class MarkerIcon(val iconName: String) {
 
     BLUE_MARKER("blueIcon"),
     RED_MARKER("redIcon"),
@@ -14,5 +14,8 @@ enum class ColorMarker(val iconName: String) {
     YELLOW_MARKER("yellowIcon"),
     VIOLET_MARKER("violetIcon"),
     GREY_MARKER("greyIcon"),
-    BLACK_MARKER("blackIcon")
+    BLACK_MARKER("blackIcon"),
+    DRONE_NORMAL("droneNormalIcon"),
+    DRONE_WARNING("droneWarningIcon"),
+    DRONE_ERROR("droneErrorIcon")
 }

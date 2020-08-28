@@ -54,11 +54,11 @@ class Controller {
 
         // display lap markers first, start and end needs to be displayed on top
         for (i in 0 until track.lapsPositions.size) {
-           mapView.addMarker(Marker(track.lapsPositions[i], "Lap ${i + 1}", ColorMarker.GREY_MARKER, 0))
+           mapView.addMarker(Marker(track.lapsPositions[i], "Lap ${i + 1}", MarkerIcon.GREY_MARKER, 0))
         }
 
-        mapView.addMarker(Marker(track.positions.first(), "Start", ColorMarker.GREEN_MARKER, 1000))
-        mapView.addMarker(Marker(track.positions.last(), "End", ColorMarker.RED_MARKER, 2000))
+        mapView.addMarker(Marker(track.positions.first(), "Start", MarkerIcon.DRONE_NORMAL, 1000))
+        mapView.addMarker(Marker(track.positions.last(), "End", MarkerIcon.RED_MARKER, 2000))
 
         mapView.addTrack(track.positions)
 
@@ -76,7 +76,7 @@ class Controller {
         val position = track.positions[positionIndex]
 
         if (positionMarker == null) {
-            positionMarker = Marker(position, "", ColorMarker.BLUE_MARKER, 0)
+            positionMarker = Marker(position, "", MarkerIcon.BLUE_MARKER, 0)
             mapView.addMarker(positionMarker!!)
         } else {
             positionMarker!!.move(position)

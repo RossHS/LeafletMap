@@ -11,7 +11,7 @@ package de.saring.leafletmap
  *
  */
 class Marker private constructor(private var position: LatLong, private var title: String, private var zIndexOffset: Int) {
-    private var marker = ColorMarker.RED_MARKER.iconName
+    private var marker = MarkerIcon.RED_MARKER.iconName
     private lateinit var map: LeafletMapView
     private var attached = false
     private var clickable = false
@@ -26,7 +26,7 @@ class Marker private constructor(private var position: LatLong, private var titl
      * @param zIndexOffset zIndexOffset (higher number means on top)
      * @return variable name of the created marker
      */
-    constructor(position: LatLong, title: String, marker: ColorMarker, zIndexOffset: Int) : this(position, title, zIndexOffset) {
+    constructor(position: LatLong, title: String, marker: MarkerIcon, zIndexOffset: Int) : this(position, title, zIndexOffset) {
         this.marker = marker.iconName
     }
 
@@ -77,7 +77,7 @@ class Marker private constructor(private var position: LatLong, private var titl
      *
      * @param newIcon the new ColorMarker
      */
-    fun changeIcon(newIcon: ColorMarker) {
+    fun changeIcon(newIcon: MarkerIcon) {
         this.marker = newIcon.iconName
         if (attached) {
             map.execScript("$name.setIcon(${newIcon.iconName});")
