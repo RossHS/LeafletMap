@@ -18,6 +18,14 @@ class Marker private constructor(private var position: LatLong, private var titl
     private var name = ""
 
     /**
+     * Rotation origins presets
+     */
+    enum class RotationOrigin(val origin: String) {
+        Center("center"),
+        TopLeft("top left")
+    }
+
+    /**
      * Creates a marker at the specified geographical position.
      *
      * @param position marker position
@@ -93,6 +101,37 @@ class Marker private constructor(private var position: LatLong, private var titl
         this.position = position
         if (attached) {
             map.execScript("$name.setLatLng([${this.position.latitude}, ${this.position.longitude}]);")
+        }
+    }
+
+    /**
+     * Sets the rotation value of the marker.
+     *
+     * @param angle new angel rotation
+     */
+    fun setRotationAngle(angle: Double) {
+        if (attached) {
+            map.execScript("$name.setRotationAngle($angle);")
+        }
+    }
+
+    /**
+     * Sets the relative rotation point.
+     *
+     * @param rotationOrigin predefined rotate point constants
+     */
+    fun setRotationOrigin(rotationOrigin: RotationOrigin) {
+        setRotationOrigin(rotationOrigin.origin)
+    }
+
+    /**
+     * Sets the relative rotation point.
+     *
+     * @param rotationOrigin set CSS rotation point constant
+     */
+    fun setRotationOrigin(rotationOrigin: String) {
+        if (attached) {
+            map.execScript("$name.setRotationOrigin('$rotationOrigin');")
         }
     }
 

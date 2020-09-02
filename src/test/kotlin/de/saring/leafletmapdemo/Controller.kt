@@ -1,6 +1,7 @@
 package de.saring.leafletmapdemo
 
 import de.saring.leafletmap.*
+import javafx.application.Platform
 import javafx.concurrent.Worker
 import javafx.fxml.FXML
 import javafx.geometry.Point2D
@@ -54,12 +55,20 @@ class Controller {
 
         // display lap markers first, start and end needs to be displayed on top
         for (i in 0 until track.lapsPositions.size) {
-           mapView.addMarker(Marker(track.lapsPositions[i], "Lap ${i + 1}", MarkerIcon.GREY_MARKER, 0))
+            mapView.addMarker(Marker(track.lapsPositions[i], "Lap ${i + 1}", MarkerIcon.GREY_MARKER, 0))
         }
-
-        mapView.addMarker(Marker(track.positions.first(), "Start", MarkerIcon.DRONE_NORMAL, 1000))
+        val marker = Marker(track.positions.first(), "Start", MarkerIcon.DRONE_NORMAL, 1000)
+        mapView.addMarker(marker)
         mapView.addMarker(Marker(track.positions.last(), "End", MarkerIcon.RED_MARKER, 2000))
-
+        marker.setRotationOrigin(Marker.RotationOrigin.Center)
+        Thread(Runnable {
+            var i = 1.0
+            while (true) {
+                Thread.sleep(50)
+                Platform.runLater { marker.setRotationAngle(i) }
+                i += 1.5
+            }
+        }).start()
         mapView.addTrack(track.positions)
 
         setupPositionSliderRange()

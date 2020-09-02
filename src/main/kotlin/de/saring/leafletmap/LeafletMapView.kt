@@ -1,20 +1,20 @@
 package de.saring.leafletmap
 
 import de.saring.leafletmap.events.*
+import javafx.concurrent.Worker
+import javafx.event.EventHandler
+import javafx.scene.input.ContextMenuEvent
 import javafx.scene.layout.StackPane
 import javafx.scene.web.WebEngine
 import javafx.scene.web.WebView
-
-import java.net.URL
-import javafx.concurrent.Worker
 import netscape.javascript.JSObject
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.IOException
+import java.net.URL
 import java.util.*
 import java.util.concurrent.CompletableFuture
 import javax.imageio.ImageIO
-
 
 /**
  * JavaFX component for displaying OpenStreetMap based maps by using the Leaflet.js JavaScript library inside a WebView
@@ -40,6 +40,7 @@ class LeafletMapView : StackPane() {
      */
     init {
         this.children.add(webView)
+        webView.isContextMenuEnabled = false
     }
 
     /**
@@ -114,6 +115,10 @@ class LeafletMapView : StackPane() {
             execScript("L.control.zoom({position: '${mapConfig.zoomControlConfig.position.positionName}'})" +
                     ".addTo(myMap);")
         }
+    }
+
+    fun setOnContextMenuRequestedWebView(handler: EventHandler<in ContextMenuEvent?>) {
+        webView.onContextMenuRequested = handler
     }
 
     /**
