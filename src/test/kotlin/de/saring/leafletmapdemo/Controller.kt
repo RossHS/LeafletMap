@@ -60,7 +60,6 @@ class Controller {
         val marker = Marker(track.positions.first(), "Start", MarkerIcon.DRONE_NORMAL, 1000)
         mapView.addMarker(marker)
         mapView.addMarker(Marker(track.positions.last(), "End", MarkerIcon.RED_MARKER, 2000))
-        marker.setRotationOrigin(Marker.RotationOrigin.Center)
         Thread(Runnable {
             var i = 1.0
             while (true) {

@@ -63,6 +63,7 @@ class Marker private constructor(private var position: LatLong, private var titl
         this.attached = true
         map.execScript("var $name = L.marker([${position.latitude}, ${position.longitude}], "
                 + "{title: '$title', icon: ${marker}, zIndexOffset: $zIndexOffset}).addTo(myMap);")
+        setRotationOrigin(RotationOrigin.Center)
         if (clickable) {
             setClickable()
         }
