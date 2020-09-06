@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.khapilov</groupId>
     <artifactId>leafletmap</artifactId>
-    <version>1.1.4.3</version>
+    <version>1.1.4.4</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
