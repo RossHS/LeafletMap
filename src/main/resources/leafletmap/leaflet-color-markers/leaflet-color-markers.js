@@ -1,81 +1,81 @@
 var blueIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-blue.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-blue-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-blue.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-blue-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var redIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-red.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-red-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-red.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-red-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var greenIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-green.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-green-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-green.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-green-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var orangeIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-orange.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-orange-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-orange.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-orange-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var yellowIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-yellow.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-yellow-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-yellow.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-yellow-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var violetIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-violet.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-violet-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-violet.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-violet-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var greyIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-grey.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-grey-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-grey.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-grey-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var blackIcon = new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/marker-icon-black.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-black-2x.png',
-	shadowUrl: 'leaflet/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
+    iconUrl: 'leaflet-color-markers/images/marker-icon-black.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/marker-icon-black-2x.png',
+    shadowUrl: 'leaflet/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 var droneNormalIcon = new L.Icon({
@@ -86,18 +86,42 @@ var droneNormalIcon = new L.Icon({
     popupAnchor: [1, -34],
 });
 
-var droneWarningIcon =  new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/drone-warning.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/drone-warning.png',
-	iconSize: [80, 80],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
+var droneWarningIcon = new L.Icon({
+    iconUrl: 'leaflet-color-markers/images/drone-warning.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/drone-warning.png',
+    iconSize: [80, 80],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
 });
 
-var droneErrorIcon =  new L.Icon({
-	iconUrl: 'leaflet-color-markers/images/drone-error.png',
-	iconRetinaUrl: 'leaflet-color-markers/images/drone-error.png',
-	iconSize: [80, 80],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
+var droneErrorIcon = new L.Icon({
+    iconUrl: 'leaflet-color-markers/images/drone-error.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/drone-error.png',
+    iconSize: [80, 80],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+});
+
+var antennaNormalIcon = new L.Icon({
+    iconUrl: 'leaflet-color-markers/images/antenna-normal.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/antenna-normal.png',
+    iconSize: [80, 80],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+});
+
+var antennaWarningIcon = new L.Icon({
+    iconUrl: 'leaflet-color-markers/images/antenna-warning.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/antenna-warning.png',
+    iconSize: [80, 80],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+});
+
+var antennaErrorIcon = new L.Icon({
+    iconUrl: 'leaflet-color-markers/images/antenna-error.png',
+    iconRetinaUrl: 'leaflet-color-markers/images/antenna-error.png',
+    iconSize: [80, 80],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
 });

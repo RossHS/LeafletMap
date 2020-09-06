@@ -17,5 +17,8 @@ enum class MarkerIcon(val iconName: String) {
     BLACK_MARKER("blackIcon"),
     DRONE_NORMAL("droneNormalIcon"),
     DRONE_WARNING("droneWarningIcon"),
-    DRONE_ERROR("droneErrorIcon")
+    DRONE_ERROR("droneErrorIcon"),
+    ANTENNA_NORMAL("antennaNormalIcon"),
+    ANTENNA_WARNING("antennaWarningIcon"),
+    ANTENNA_ERROR("antennaErrorIcon")
 }

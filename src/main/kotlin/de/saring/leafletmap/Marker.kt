@@ -55,7 +55,7 @@ class Marker private constructor(private var position: LatLong, private var titl
      * Adds the marker to a map, gets called from the mapAddMarker
      *
      * @param nextMarkerName the variable name of the marker
-     * @param map the LeafetMapView
+     * @param map the LeafletMapView
      */
     internal fun addToMap(nextMarkerName: String, map: LeafletMapView) {
         this.name = nextMarkerName
