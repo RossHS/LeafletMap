@@ -82,7 +82,7 @@ var droneNormalIcon = new L.Icon({
     iconUrl: 'leaflet-color-markers/images/drone-normal.png',
     iconRetinaUrl: 'leaflet-color-markers/images/drone-normal.png',
     iconSize: [80, 80],
-    iconAnchor: [12, 41],
+    iconAnchor: [40, 80],
     popupAnchor: [1, -34],
 });
 
@@ -90,7 +90,7 @@ var droneWarningIcon = new L.Icon({
     iconUrl: 'leaflet-color-markers/images/drone-warning.png',
     iconRetinaUrl: 'leaflet-color-markers/images/drone-warning.png',
     iconSize: [80, 80],
-    iconAnchor: [12, 41],
+    iconAnchor: [40, 80],
     popupAnchor: [1, -34],
 });
 
@@ -98,7 +98,7 @@ var droneErrorIcon = new L.Icon({
     iconUrl: 'leaflet-color-markers/images/drone-error.png',
     iconRetinaUrl: 'leaflet-color-markers/images/drone-error.png',
     iconSize: [80, 80],
-    iconAnchor: [12, 41],
+    iconAnchor: [40, 80],
     popupAnchor: [1, -34],
 });
 
@@ -106,7 +106,7 @@ var antennaNormalIcon = new L.Icon({
     iconUrl: 'leaflet-color-markers/images/antenna-normal.png',
     iconRetinaUrl: 'leaflet-color-markers/images/antenna-normal.png',
     iconSize: [80, 80],
-    iconAnchor: [12, 41],
+    iconAnchor: [40, 80],
     popupAnchor: [1, -34],
 });
 
@@ -114,7 +114,7 @@ var antennaWarningIcon = new L.Icon({
     iconUrl: 'leaflet-color-markers/images/antenna-warning.png',
     iconRetinaUrl: 'leaflet-color-markers/images/antenna-warning.png',
     iconSize: [80, 80],
-    iconAnchor: [12, 41],
+    iconAnchor: [40, 80],
     popupAnchor: [1, -34],
 });
 
@@ -122,6 +122,6 @@ var antennaErrorIcon = new L.Icon({
     iconUrl: 'leaflet-color-markers/images/antenna-error.png',
     iconRetinaUrl: 'leaflet-color-markers/images/antenna-error.png',
     iconSize: [80, 80],
-    iconAnchor: [12, 41],
+    iconAnchor: [40, 80],
     popupAnchor: [1, -34],
 });
