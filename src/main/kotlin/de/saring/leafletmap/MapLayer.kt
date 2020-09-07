@@ -44,13 +44,4 @@ enum class MapLayer(val displayName: String, val javaScriptCode: String) {
             subdomains:['mt0','mt1','mt2','mt3'],
             attribution: 'Map data &copy; Google contributors'
         })"""),
-
-    /** Yandex common maps*/
-    YANDEX_COMMON("Yandex Common", """
-        L.tileLayer('http://vec{s}.maps.yandex.net/tiles?l=map&v=4.55.2&z={z}&x={x}&y={y}&scale=2&lang=ru_RU', {
-            subdomains: ['01', '02', '03', '04'],
-            attribution: 'Яндекс',
-            reuseTiles: true,
-            updateWhenIdle: false
-        })""")
 }
