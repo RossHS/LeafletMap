@@ -59,12 +59,17 @@ class Controller {
         }
         val marker = Marker(track.positions.first(), "Start", MarkerIcon.DRONE_NORMAL, 1000)
         mapView.addMarker(marker)
+        marker.bindTooltip("ad")
+        Platform.runLater{marker.bindPopup("asd")}
         mapView.addMarker(Marker(track.positions.last(), "End", MarkerIcon.RED_MARKER, 2000))
         Thread(Runnable {
             var i = 1.0
             while (true) {
                 Thread.sleep(50)
-                Platform.runLater { marker.setRotationAngle(i) }
+                Platform.runLater {
+                    marker.setRotationAngle(i)
+                    marker.setTooltipContent(i.toString())
+                }
                 i += 1.5
             }
         }).start()

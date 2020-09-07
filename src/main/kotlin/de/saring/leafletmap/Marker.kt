@@ -64,6 +64,7 @@ class Marker private constructor(private var position: LatLong, private var titl
         map.execScript("var $name = L.marker([${position.latitude}, ${position.longitude}], "
                 + "{title: '$title', icon: ${marker}, zIndexOffset: $zIndexOffset}).addTo(myMap);")
         setRotationOrigin(RotationOrigin.Center)
+//        bindToolTip("asd")
         if (clickable) {
             setClickable()
         }
@@ -133,6 +134,39 @@ class Marker private constructor(private var position: LatLong, private var titl
     fun setRotationOrigin(rotationOrigin: String) {
         if (attached) {
             map.execScript("$name.setRotationOrigin('$rotationOrigin');")
+        }
+    }
+
+    /**
+     * Create toolTip menu
+     *
+     * @param content String or HTML element
+     */
+    fun bindTooltip(content: String) {
+        if (attached) {
+            map.execScript("$name.bindTooltip('$content', {permanent: true, className: 'my-label', offset: [0, 40], direction: 'bottom' });")
+        }
+    }
+
+    /**
+     * Update toolTip content
+     *
+     * @param content String or HTML element
+     */
+    fun setTooltipContent(content: String) {
+        if (attached) {
+            map.execScript("$name.setTooltipContent('$content')")
+        }
+    }
+
+    /**
+     * Bind popup to the marker
+     *
+     * @param content String or HTML element
+     */
+    fun bindPopup(content: String) {
+        if (attached) {
+            map.execScript("$name.bindPopup('$content').openPopup();")
         }
     }
 
