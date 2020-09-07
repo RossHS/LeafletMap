@@ -36,5 +36,21 @@ enum class MapLayer(val displayName: String, val javaScriptCode: String) {
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
             id: 'mapbox.streets',
             attribution: 'Map data &copy; OpenStreetMap contributors, Imagery &copy; Mapbox'
+        })"""),
+
+    /** Google map hybrid*/
+    GOOGLE_HYBRID("Google Map Hybrid", """
+        L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+            subdomains:['mt0','mt1','mt2','mt3'],
+            attribution: 'Map data &copy; Google contributors'
+        })"""),
+
+    /** Yandex common maps*/
+    YANDEX_COMMON("Yandex Common", """
+        L.tileLayer('http://vec{s}.maps.yandex.net/tiles?l=map&v=4.55.2&z={z}&x={x}&y={y}&scale=2&lang=ru_RU', {
+            subdomains: ['01', '02', '03', '04'],
+            attribution: 'Яндекс',
+            reuseTiles: true,
+            updateWhenIdle: false
         })""")
 }
