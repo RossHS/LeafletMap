@@ -649,3 +649,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .my-label-bottom:before {
     border-bottom-color:#000;
 }
+.my-custom-icon{
+	width: 24px !important;
+	height: 24px !important;
+	margin-left: -12px;
+	margin-top: -12px;
+	border-radius: 18px;
+	border: 2px solid #3F51B5;
+	text-align: center;
+	color: #3F51B5;
+	background-color: #fff;
+	font-size: 16px;
+}
