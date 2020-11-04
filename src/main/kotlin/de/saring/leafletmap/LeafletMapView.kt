@@ -294,7 +294,7 @@ class LeafletMapView : StackPane() {
      */
     fun addMissionPoint(missionName: String, latLong: LatLong, num: String) {
         execScript("""
-            var $missionName$num = L.marker([23.41,79.12], {
+            var $missionName$num = L.marker([${latLong.latitude},${latLong.longitude}], {
                 icon: L.divIcon({
                 className: 'my-custom-icon',
                 html: $num})
