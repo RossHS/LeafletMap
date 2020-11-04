@@ -276,8 +276,41 @@ class LeafletMapView : StackPane() {
             |myMap.fitBounds($trackName.getBounds());""".trimMargin())
     }
 
+    /**
+     * Remove a track path from Map.
+     *
+     * @param trackName name of the track
+     */
     fun removeTrack(trackName: String) {
         execScript("myMap.removeLayer($trackName)")
+    }
+
+    /**
+     * Add mission point to the Map.
+     *
+     * @param missionName mission points layer name
+     * @param latLong coordinate
+     * @param num num of mission point
+     */
+    fun addMissionPoint(missionName: String, latLong: LatLong, num: String) {
+        execScript("""
+            var $missionName$num = L.marker([23.41,79.12], {
+                icon: L.divIcon({
+                className: 'my-custom-icon',
+                html: $num})
+            });
+
+            $missionName$num.addTo(myMap);
+        """.trimIndent())
+    }
+
+    /**
+     * Remove special mission point from the Map layer.
+     * @param missionName name of the mission point
+     * @param num point id
+     */
+    fun removeMissionPoint(missionName: String, num: String) {
+        execScript("myMap.removeLayer($missionName$num)");
     }
 
     internal fun execScript(script: String) = webEngine.executeScript(script)
