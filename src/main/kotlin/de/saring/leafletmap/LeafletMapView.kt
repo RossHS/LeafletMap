@@ -257,7 +257,8 @@ class LeafletMapView : StackPane() {
     }
 
     /**
-     * Draws a track path along the specified positions in the color red and zooms the map to fit the track perfectly.
+     * Draws a track path along the specified positions in the color red and zooms the map to fit the track perfectly
+     * and add mission points.
      *
      * @param positions list of track positions
      */
@@ -274,15 +275,26 @@ class LeafletMapView : StackPane() {
 
             |var $trackName = L.polyline(latLngs, {color: 'red', weight: 2}).addTo(myMap);
             |myMap.fitBounds($trackName.getBounds());""".trimMargin())
+
+        var i = 1;
+        for (ll in positions) {
+            addMissionPoint(trackName, ll, i.toString())
+            i++
+        }
     }
 
     /**
-     * Remove a track path from Map.
+     * Remove a track path and mission points from Map.
      *
      * @param trackName name of the track
+     * @param num count of flight mission
      */
-    fun removeTrack(trackName: String) {
+    fun removeTrack(trackName: String, num: Int) {
         execScript("myMap.removeLayer($trackName)")
+
+        for (t in 1..num) {
+            removeMissionPoint(trackName, t.toString())
+        }
     }
 
     /**
@@ -310,7 +322,7 @@ class LeafletMapView : StackPane() {
      * @param num point id
      */
     fun removeMissionPoint(missionName: String, num: String) {
-        execScript("myMap.removeLayer($missionName$num)");
+        execScript("myMap.removeLayer($missionName$num)")
     }
 
     internal fun execScript(script: String) = webEngine.executeScript(script)
