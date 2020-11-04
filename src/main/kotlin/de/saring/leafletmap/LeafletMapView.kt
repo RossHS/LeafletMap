@@ -261,7 +261,7 @@ class LeafletMapView : StackPane() {
      *
      * @param positions list of track positions
      */
-    fun addTrack(positions: List<LatLong>) {
+    fun addTrack(trackName: String, positions: List<LatLong>) {
 
         val jsPositions = positions
                 .map { "    [${it.latitude}, ${it.longitude}]" }
@@ -272,8 +272,12 @@ class LeafletMapView : StackPane() {
             |$jsPositions
             |];
 
-            |var polyline = L.polyline(latLngs, {color: 'red', weight: 2}).addTo(myMap);
-            |myMap.fitBounds(polyline.getBounds());""".trimMargin())
+            |var $trackName = L.polyline(latLngs, {color: 'red', weight: 2}).addTo(myMap);
+            |myMap.fitBounds($trackName.getBounds());""".trimMargin())
+    }
+
+    fun removeTrack(trackName: String) {
+        execScript("myMap.removeLayer($trackName)")
     }
 
     internal fun execScript(script: String) = webEngine.executeScript(script)
