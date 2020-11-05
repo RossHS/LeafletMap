@@ -276,7 +276,7 @@ class LeafletMapView : StackPane() {
             |var $trackName = L.polyline(latLngs, {color: 'red', weight: 2}).addTo(myMap);
             |myMap.fitBounds($trackName.getBounds());""".trimMargin())
 
-        var i = 1;
+        var i = 1
         for (ll in positions) {
             addMissionPoint(trackName, ll, i.toString())
             i++
@@ -309,6 +309,7 @@ class LeafletMapView : StackPane() {
             var $missionName$num = L.marker([${latLong.latitude},${latLong.longitude}], {
                 icon: L.divIcon({
                 className: 'my-custom-icon',
+                iconAnchor: [12, 12],
                 html: $num})
             });
 
