@@ -57,24 +57,31 @@ class Controller {
         for (i in 0 until track.lapsPositions.size) {
             mapView.addMarker(Marker(track.lapsPositions[i], "Lap ${i + 1}", MarkerIcon.GREY_MARKER, 0))
         }
-        val marker = Marker(track.positions.first(), "Start", MarkerIcon.DRONE_NORMAL, 1000)
+        val marker = Marker(track.positions.first(), "Start", MarkerIcon.DRONE_NORMAL, 0)
         mapView.addMarker(marker)
         marker.bindTooltip("ad")
-        Platform.runLater{marker.bindPopup("asd")}
-        mapView.addMarker(Marker(track.positions.last(), "End", MarkerIcon.RED_MARKER, 2000))
+        Platform.runLater { marker.bindPopup("asd") }
+        mapView.addMarker(Marker(track.positions.last(), "End", MarkerIcon.RED_MARKER, 0))
         Thread(Runnable {
             var i = 1.0
             while (true) {
-                Thread.sleep(50)
+                Thread.sleep(10000)
                 Platform.runLater {
                     marker.setRotationAngle(i)
                     marker.setTooltipContent(i.toString())
+                    mapView.removeTrack("track", track.positions.size)
+//                    mapView.removeMissionPoint("ms", "3");
                 }
                 i += 1.5
             }
         }).start()
-        mapView.addTrack(track.positions)
-
+        val ll = listOf(LatLong(52.63, 39.60),
+                LatLong(52.69, 39.63),
+                LatLong(52.62, 39.69))
+        mapView.addTrack("tr", ll)
+        mapView.addMissionPoint("pppp",track.positions.first(),"3");
+//        mapView.addTrack("track", track.positions)
+//        mapView.addMissionPoint("ms", LatLong(23.3, 23.2), "3");
         setupPositionSliderRange()
     }
 
